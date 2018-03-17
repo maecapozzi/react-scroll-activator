@@ -5,16 +5,21 @@
   "main": "index.js",
   "scripts": {
     "compile": "babel src --lose --out-dir lib",
-    "start": "webpack --watch",
+    "build": "NODE_ENV=production npx parcel build src/index.js -d public/js/ --no-cache",
+    "postinstall": "npm run build",
+    "start": "parcel index.html",
+    "dev": "npx parcel build src/index.js -d public/js/ --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier-standard 'src/**/*.js'",
+    "format": "prettier-standard '*.js'",
     "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maecapozzi/react-scroll-activator.git"
   },
-  "keywords": ["React"],
+  "keywords": [
+    "React"
+  ],
   "author": "Mae Capozzi",
   "license": "MIT",
   "bugs": {
@@ -22,22 +27,30 @@
   },
   "homepage": "https://github.com/maecapozzi/react-scroll-activator#readme",
   "devDependencies": {
+    "cross-env": "^5.1.4",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier-standard": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-standard",
+      "git add"
+    ]
+  },
+  "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-inline-environment-variables": "^0.3.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "react": "^16.2.0",
+    "parcel-bundler": "^1.6.2",
+    "prop-types": "^15.6.1",
     "react-dom": "^16.2.0",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12",
-    "prettier-standard": "^8.0.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.0"
-  },
-  "lint-staged": {
-    "*.js": ["prettier-standard", "git add"]
+    "react": "^16.2.0"
   }
 }
