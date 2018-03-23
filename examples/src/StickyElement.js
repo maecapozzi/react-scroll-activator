@@ -1,20 +1,27 @@
-import React from "react"
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const header = {
+  backgroundColor: 'red',
+  height: '100px',
+  width: '95%'
+}
+
+const fixedHeader = {
+  backgroundColor: 'red',
+  height: '100px',
+  position: 'fixed',
+  width: '95%'
+}
 
 const StickyElement = ({ isSticky }) => {
-  if (isSticky === "isActivated") {
+  if (isSticky === 'isActivated') {
     return (
-      <div style={{ height: "5000px" }}>
-        <div
-          style={{
-            backgroundColor: "red",
-            height: "100px",
-            position: "fixed",
-            width: "95%"
-          }}
-        >
+      <div style={{ height: '5000px' }}>
+        <div style={fixedHeader}>
           <h1
             style={{
-              color: "white"
+              color: 'white'
             }}
           >
             I'm Sticky
@@ -24,12 +31,12 @@ const StickyElement = ({ isSticky }) => {
     )
   } else {
     return (
-      <div style={{ height: "5000px" }}>
-        <div style={{ backgroundColor: "red", height: "100px" }}>
+      <div style={{ height: '5000px' }}>
+        <div style={header}>
           <h1
             style={{
-              marginTop: "200px",
-              color: "white"
+              marginTop: '200px',
+              color: 'white'
             }}
           >
             I'm Not Sticky
@@ -38,6 +45,10 @@ const StickyElement = ({ isSticky }) => {
       </div>
     )
   }
+}
+
+StickyElement.propTypes = {
+  isSticky: PropTypes.string
 }
 
 export default StickyElement

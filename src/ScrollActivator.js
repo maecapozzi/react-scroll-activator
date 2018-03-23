@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ReactDOM from "react-dom"
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactDOM from 'react-dom'
 
 class ScrollActivator extends React.Component {
   static propTypes = {
@@ -9,7 +9,7 @@ class ScrollActivator extends React.Component {
     containerSelector: PropTypes.node
   }
 
-  state = { activatedState: "isNotActivated" }
+  state = { activatedState: 'isNotActivated' }
 
   componentDidMount () {
     this.containerSelector = document.querySelector(
@@ -17,18 +17,17 @@ class ScrollActivator extends React.Component {
     )
 
     this.containerSelector &&
-      this.containerSelector.addEventListener("scroll", this.handleScroll)
+      this.containerSelector.addEventListener('scroll', this.handleScroll)
   }
 
   componentWillUnmount () {
     this.containerSelector &&
-      this.containerSelector.removeEventListener("scroll", this.handleScroll)
+      this.containerSelector.removeEventListener('scroll', this.handleScroll)
   }
 
   handleScroll = e => {
-    console.log("hit")
     this.setState({
-      activatedState: this.props.onScroll(e) ? "isActivated" : "isNotActivated"
+      activatedState: this.props.onScroll(e) ? 'isActivated' : 'isNotActivated'
     })
   }
 
