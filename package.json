@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "compile": "babel src --lose --out-dir lib",
-    "build": "NODE_ENV=production npx parcel build src/index.js -d public/js/ --no-cache",
-    "postinstall": "npm run build",
-    "start": "parcel index.html",
-    "dev": "npx parcel build src/index.js -d public/js/ --no-cache",
+    "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url",
+    "start": "cross-env NODE_ENV=development parcel index.html",
+    "start:demo": "cross-env NODE_ENV=development parcel examples/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier-standard '*.js'",
     "precommit": "lint-staged"
@@ -27,7 +26,6 @@
   },
   "homepage": "https://github.com/maecapozzi/react-scroll-activator#readme",
   "devDependencies": {
-    "cross-env": "^5.1.4",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
     "prettier-standard": "^8.0.0"

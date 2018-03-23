@@ -1,5 +1,5 @@
-import React from 'react'
-import { render } from 'react-dom'
+import React from "react"
+import { render } from "react-dom"
 
 if (module.hot) {
   module.hot.accept()
@@ -7,4 +7,4 @@ if (module.hot) {
 
 const App = () => <h1>Hi</h1>
 
-render(<App />, document.getElementById('app'))
+render(<App />, document.getElementById("app"))
