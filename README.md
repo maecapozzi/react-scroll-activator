@@ -3,3 +3,18 @@
 It can be used on any container not just the window.  
 
 To run the demos: `npm run start:demo`
+
+## Documentation Structure
+
+Title + tagline + logo?
+Badges
+The problem
+The solution
+TOC
+Installation
+Usage
+FAQ
+Inspiration
+Alternatives
+Contributors
+License
