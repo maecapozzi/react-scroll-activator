@@ -7,10 +7,6 @@ if (module.hot) {
   module.hot.accept()
 }
 
-class DemoApp extends React.Component {
-  render () {
-    return <Container />
-  }
-}
+const DemoApp = () => <Container />
 
 render(<DemoApp />, document.getElementById('demo-app'))

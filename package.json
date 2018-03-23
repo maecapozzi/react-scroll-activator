@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/maecapozzi/react-scroll-activator#readme",
   "devDependencies": {
+    "cross-env": "^5.1.4",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "husky": "^0.14.3",
