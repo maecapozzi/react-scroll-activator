@@ -10,14 +10,19 @@ You want an element to "stick" to the top of the window when a user scrolls in a
 ### The Solution
 The `react-scroll-activator` is a straightforward component that watches for a scroll event inside any container. If a user scrolls, (and a series of conditions are met), the `ScrollActivator` component sends an `activatedState` prop to a render prop component, triggering the render prop component's behavior. 
 
-### TOC
-  1.  Installation
-  2.  Usage
-  3.  FAQ
-  4.  Inspiration
-  5.  Alternatives
-  6.  Contributors
-  7. License
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+### Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [FAQ](#faq)
+- [Inspiration](#inspiration)
+- [Alternatives](#alternatives)
+- [Contributors](#contributors)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
   
 ### Installation
 ### Usage
