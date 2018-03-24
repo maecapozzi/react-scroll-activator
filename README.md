@@ -9,14 +9,14 @@ It can be difficult to force an element to "stick" to the top of the window when
 I created a component that would watch for a scroll event inside any container. If a user scrolls, (and a series of conditions are met), the `ScrollActivator` component will send an `activatedState` prop to a render prop component. 
 
 ```
-<ScrollContainer className='any-class-name'>
+<div className='any-class-name'>
   <ScrollActivator
     onScroll={this.handleScrollCallback}
     containerSelector='.any-class-name'
   >
     {activatedState => <StickyElement isSticky={activatedState} />}
   </ScrollActivator>
-</ScrollContainer>
+</div>
 ```
 
 To run the demos: `npm run start:demo`
