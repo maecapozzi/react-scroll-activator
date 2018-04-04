@@ -2,7 +2,8 @@
 `react-scroll-activator` watches for a scroll event inside of a container or on the window. When certain user-defined rules are met, it passes an `activatedState` prop to a render prop component, triggering whatever behavior the developer chooses on the child.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CircleCI](https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser.svg)]
+[![CircleCI](https://circleci.com/gh/maecapozzi/react-scroll-activator/tree/master.svg?style=svg)](https://circleci.com/gh/maecapozzi/react-scroll-activator/tree/master)
+
 ### The Problem
 You want an element to "stick" to the top of the window when a user scrolls in a page. Or maybe you want to hide an element as a user scrolls. Basically, you want to trigger the behavior of a component as a user scrolls. 
 
