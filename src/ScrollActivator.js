@@ -36,9 +36,12 @@ class ScrollActivator extends React.Component {
   }
 
   handleScroll = e => {
-    this.setState({
-      activatedState: this.props.onScroll(e) ? 'isActivated' : 'isNotActivated'
-    })
+    let activatedState = this.props.onScroll(e)
+      ? 'isActivated'
+      : 'isNotActivated'
+    if (this.state.activatedState != activatedState) {
+      this.setState({ activatedState })
+    }
   }
 
   render() {
