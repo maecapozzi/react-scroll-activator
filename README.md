@@ -32,7 +32,7 @@ You want an element to "stick" to the top of the window when a user scrolls in a
 You can either use the `ScrollActivator` component on the window, or on any container that scrolls. 
 
 #### On the window
-```
+```jsx
 class StickyElement extends React.Component {
   shouldComponentBeSticky = () => {
     return window.scrollY > 120;
@@ -65,7 +65,7 @@ class StickyElement extends React.Component {
 
 Let's say the modal's classname is `.any-class-name`:
 
-```
+```jsx
 class StickyElement extends React.Component {
   handleScrollCallback = (e, topOffset) => {
     this.containerSelector = document.querySelector('.any-class-name')
