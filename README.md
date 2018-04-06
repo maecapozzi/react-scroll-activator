@@ -35,16 +35,16 @@ You can either use the `ScrollActivator` component on the window, or on any cont
 ```jsx
 class StickyElement extends React.Component {
   shouldComponentBeSticky = () => {
-    return window.scrollY > 120;
+    return window.scrollY > 120
   }
 
   isSticky = activatedState => {
     if (activatedState === 'isActivated') {
-      return { position: 'fixed' };
+      return { position: 'fixed' }
     } else {
-      return { position: 'relative' };
+      return { position: 'relative' }
     }
-  };
+  }
 
   render () {
     return (
