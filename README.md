@@ -29,6 +29,8 @@ You want an element to "stick" to the top of the window when a user scrolls in a
 `npm install react-scroll-activator`
 ### Usage
 
+• [Basic](https://jsfiddle.net/maecapozzi/2ys8nnz1/11/)
+
 You can either use the `ScrollActivator` component on the window, or on any container that scrolls. 
 
 #### On the window
