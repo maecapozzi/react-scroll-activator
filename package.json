@@ -2,12 +2,11 @@
   "name": "react-scroll-activator",
   "version": "1.0.2",
   "description": "A React component that watches for a scroll event",
-  "main": "index.js",
+  "main": "dist/react-scroll-activator.js",
   "scripts": {
     "compile": "babel src --lose --out-dir lib",
-    "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url",
-    "start": "cross-env NODE_ENV=development parcel index.html",
-    "start:demo": "cross-env NODE_ENV=development parcel examples/index.html",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open --hot",
     "test": "jest",
     "format": "prettier-standard '*.js'",
     "precommit": "lint-staged"
@@ -26,22 +25,6 @@
   },
   "homepage": "https://github.com/maecapozzi/react-scroll-activator#readme",
   "devDependencies": {
-    "@babel/code-frame": "^7.0.0-beta.44",
-    "cross-env": "^5.1.4",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "husky": "^0.14.3",
-    "jest": "^22.4.3",
-    "lint-staged": "^7.0.0",
-    "prettier-standard": "^8.0.0"
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier-standard",
-      "git add"
-    ]
-  },
-  "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
@@ -51,7 +34,23 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "parcel-bundler": "^1.6.2",
+    "cross-env": "^5.1.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.0",
+    "prettier-standard": "^8.0.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-standard",
+      "git add"
+    ]
+  },
+  "dependencies": {
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

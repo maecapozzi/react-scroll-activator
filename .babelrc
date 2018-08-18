@@ -1,11 +1,9 @@
 {
   "presets": [
-    "es2015",
-    "stage-0",
+    "env",
     "react"
   ],
   "plugins": [
-    "transform-inline-environment-variables",
-    "babel-plugin-transform-class-properties"
+    "transform-class-properties"
   ]
 }
