@@ -11,7 +11,7 @@ class ScrollActivator extends React.Component {
 
   state = { activatedState: 'isNotActivated' }
 
-  componentDidMount() {
+  componentDidMount () {
     this.props.containerSelector
       ? this.setContainerSelector()
       : this.setContainerSelectorToWindow()
@@ -20,7 +20,7 @@ class ScrollActivator extends React.Component {
       this.containerSelector.addEventListener('scroll', this.handleScroll)
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this.containerSelector &&
       this.containerSelector.removeEventListener('scroll', this.handleScroll)
   }
@@ -39,12 +39,12 @@ class ScrollActivator extends React.Component {
     let activatedState = this.props.onScroll(e)
       ? 'isActivated'
       : 'isNotActivated'
-    if (this.state.activatedState != activatedState) {
+    if (this.state.activatedState !== activatedState) {
       this.setState({ activatedState })
     }
   }
 
-  render() {
+  render () {
     return this.props.children(this.state.activatedState)
   }
 }
