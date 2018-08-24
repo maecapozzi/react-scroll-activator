@@ -1,6 +1,6 @@
 {
   "name": "react-scroll-activator",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A React component that watches for a scroll event",
   "main": "dist/react-scroll-activator.js",
   "scripts": {
